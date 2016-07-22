@@ -1,0 +1,8 @@
+﻿@using aspWebMVC.Controllers
+@model List<UserViewModel>
+
+
+@foreach (UserViewModel value in Model)
+{
+    <p>@value.name</p>
+}

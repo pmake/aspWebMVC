@@ -1,0 +1,29 @@
+﻿@using aspWebMVC.Controllers
+@model UserViewModel
+
+@* 設定變數值 *@
+@{
+    string text = "Show a Text";
+}
+
+<input type="text" value="@text" />
+
+@* 加@代表Razor語法，變數前加@為讀取值，未加@為賦值 *@
+@if (@Model.isShow){
+    text = "next test.";
+    
+    <label>@Model.name</label>
+    text = "next test. part2";
+}
+else
+{
+    <label>@Model.address</label>
+}
+
+
+@section mySection{
+    @* 自定義前端內容 *@
+    <script>
+        console.log('123');
+    </script>
+}
