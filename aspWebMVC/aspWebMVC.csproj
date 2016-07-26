@@ -111,7 +111,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\Archi\ArchiController.cs" />
+    <Compile Include="Controllers\Archi\FirstController.cs" />
+    <Compile Include="Controllers\Archi\TestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -154,8 +155,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Archi\Index.cshtml" />
-    <Content Include="Views\Archi\Products.cshtml" />
+    <Content Include="Views\First\Index.cshtml" />
+    <Content Include="Views\First\Products.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

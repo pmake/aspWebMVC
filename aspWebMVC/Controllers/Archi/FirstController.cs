@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace aspWebMVC.Controllers
 {
-    public class ArchiController : Controller
+    public class FirstController : Controller
     {
         // GET: Archi
         public ActionResult Index()

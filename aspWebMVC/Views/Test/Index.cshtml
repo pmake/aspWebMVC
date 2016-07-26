@@ -1,0 +1,40 @@
+﻿@using System.Collections.Generic;
+@using aspWebMVC.Controllers.Archi
+@model TestIndexModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .thumbnail {
+        border-color: #6B9362;
+    }
+    .btn-info {
+        background-color: #2aabd2;
+        border-color: #2aabd2;
+    }
+</style>
+
+<br />
+
+<div calss="row">
+    @foreach(var item in Model.ItemsCards){
+        @ItemCards(item.Title, item.Content, item.Path)
+    }
+</div>
+
+@helper ItemCards(string title, string content, string src)
+{
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img data-src="holder.js/100%x200" alt="100%x200" src="@src" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+            <div class="caption">
+                <h3>@title</h3>
+                <p>@content</p>
+                <p>
+                    <a href="#" class="btn btn-info" role="button">Buy</a>
+                </p>
+            </div>
+        </div>
+    </div>
+}
