@@ -28,7 +28,7 @@ namespace aspWebMVC.App_Start
         }
 
         /// <summary>
-        /// Cross Join
+        /// Cross Join，使用debug模式去看語法運作方式即可理解
         /// </summary>
         public void TheSelectMany()
         {
@@ -54,13 +54,16 @@ namespace aspWebMVC.App_Start
 
         public void TheGroupBy()
         {
+            //將資料表以指定的欄位分類傳回
             IQueryable<IGrouping<string, DimCustomer>> aa =
                 Entity.DimCustomer.GroupBy(a => a.Gender);
             var bb = aa.ToList();
 
+            //讀取時外層是類別
             foreach (var collection in bb)
             {
                 //collection.Key
+                //內層就是資料列
                 foreach (var item in collection)
                 {
                     //item.LastName;
@@ -72,6 +75,7 @@ namespace aspWebMVC.App_Start
 
         public void TheToLookup()
         {
+            //類似GroupBy，差異在Lookup直接取回查詢結果，GroupBy則是預查詢，使用ToList()才取回
             ILookup<string, DimCustomer> aa =
                 Entity.DimCustomer.ToLookup(a => a.Gender);
 
