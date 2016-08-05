@@ -7,6 +7,9 @@ using aspWebMVC.Models;
 
 namespace aspWebMVC.App_Start
 {
+    /// <summary>
+    /// 資料庫查詢常用語法，先有個概念即可，要用的時候再查看
+    /// </summary>
     public class DBManipulator
     {
         public AdventureWorksDW2012Entities Entity { set; get; }
