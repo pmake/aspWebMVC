@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using aspWebMVC.App_Start;
+using aspWebMVC.Models;
+
 
 namespace aspWebMVC.Controllers.Archi
 {
@@ -28,6 +31,34 @@ namespace aspWebMVC.Controllers.Archi
         {
             return random.Next(10) + 1;
         }
+
+        //DBManiplating使用
+        public ActionResult Test()
+        {
+            DBManipulator dbManipulator = new DBManipulator();
+            dbManipulator.Entity = new AdventureWorksDW2012Entities();
+            //teach.TheWhere();
+            //teach.TheSelect();
+            //teach.TheSelectMany();
+            //teach.TheGroupBy();
+            //teach.TheToLookup();
+
+            //teach.TheJoin();
+            //teach.TheGroupJoin();
+            //teach.TheOrderByAndTheThenBy();
+
+            //teach.SkipOrTake();
+
+            //teach.FirstOrlast();
+            //teach.TheContains();
+            //teach.CountAndAny();
+            dbManipulator.MaxAndMinAndSum();
+
+            return View();
+        }
+
+
+
     }
     public class TestIndexModel
     {
