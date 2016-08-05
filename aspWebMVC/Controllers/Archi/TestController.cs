@@ -37,21 +37,21 @@ namespace aspWebMVC.Controllers.Archi
         {
             DBManipulator dbManipulator = new DBManipulator();
             dbManipulator.Entity = new AdventureWorksDW2012Entities();
-            //teach.TheWhere();
-            //teach.TheSelect();
-            //teach.TheSelectMany();
-            //teach.TheGroupBy();
-            //teach.TheToLookup();
+            //dbManipulator.TheWhere();
+            //dbManipulator.TheSelect();
+            dbManipulator.TheSelectMany();
+            //dbManipulator.TheGroupBy();
+            //dbManipulator.TheToLookup();
 
-            //teach.TheJoin();
-            //teach.TheGroupJoin();
-            //teach.TheOrderByAndTheThenBy();
+            //dbManipulator.TheJoin();
+            //dbManipulator.TheGroupJoin();
+            //dbManipulator.TheOrderByAndTheThenBy();
 
-            //teach.SkipOrTake();
+            //dbManipulator.SkipOrTake();
 
-            //teach.FirstOrlast();
-            //teach.TheContains();
-            //teach.CountAndAny();
+            //dbManipulator.FirstOrlast();
+            //dbManipulator.TheContains();
+            //dbManipulator.CountAndAny();
             dbManipulator.MaxAndMinAndSum();
 
             return View();
